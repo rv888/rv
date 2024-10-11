@@ -659,7 +659,7 @@
                 }
             }).then(response => {
                 if (response.ok) {
-                    status.innerHTML = "Thanks for your submission!";
+                    status.innerHTML = "Contact form submitted.";
                     form.reset()
                 } else {
                     response.json().then(data => {
@@ -671,11 +671,10 @@
                     })
                 }
             }).catch(error => {
-                console.log(error);
                 status.innerHTML = "Oops! There was a problem submitting your form"
             });
         }
-        form.addEventListener("submit", handleSubmit);
+        form.addEventListener("submit", handleSubmit)
     </script>
     <style>
         a.black.underline, a.black.underline:focus, a.black.underline:hover {
