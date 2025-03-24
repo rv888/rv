@@ -35,7 +35,7 @@ a.black, a.black:focus, a.black:hover {
   .red-section p {
     color: #fff;
     font-size: 20px; }
-  .red-section ul.service-list {
+  .red-section ul.service-list li {
     color: #fff; }
 
 .red-section.margin-top-zero {
@@ -44,7 +44,7 @@ a.black, a.black:focus, a.black:hover {
 .light-gray-section {
   background-color: #f7f7f7;
   padding-bottom: 20px;
-  margin-top: 20px; }
+  padding-top: 20px; }
   .light-gray-section p {
     color: #333;
     font-size: 20px; }
