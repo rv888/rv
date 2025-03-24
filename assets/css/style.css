@@ -24,14 +24,14 @@ a.black, a.black:focus, a.black:hover {
 
 .gray-section {
   background-color: #333;
-  margin-top: 20px; }
+  padding-top: 20px; }
   .gray-section p {
     color: #fff;
     font-size: 20px; }
 
 .red-section {
   background-color: #333;
-  margin-top: 20px; }
+  padding-top: 20px; }
   .red-section p {
     color: #fff;
     font-size: 20px; }
