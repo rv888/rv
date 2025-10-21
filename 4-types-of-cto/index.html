@@ -32,6 +32,9 @@
       .callout p { margin-bottom: 0; }
       .footer-bar { background: #000; color: #fff; padding: 15px 0; text-align: center; font-size: 15px; }
       a.black.underline, a.black.underline:hover { text-decoration: underline; color: #000; }
+      ol { list-style: none; padding-left: 0; counter-reset: cto-counter; }
+      ol li { counter-increment: cto-counter; position: relative; }
+      ol li::before { content: counter(cto-counter); font-size: 48px; font-weight: 700; color: #333; display: block; margin-bottom: 10px; }
     </style>
   </head>
   <body>
