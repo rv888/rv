@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ryan Vinson | Fractional CTO & Tech Advisor</title>
+    <meta name="description" content="Fractional CTO and founder based in Los Angeles, 25+ years of experience, author of 'Disregarded Entity', Mandarin Chinese proficiency, and amateur winemaker.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #c0392b;
+            --accent: #f39c12;
+            --bg: #ffffff;
+            --text: #333333;
+            --light-gray: #f9f9f9;
+            --border: #eeeeee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 4rem 0 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-img-container {
+            flex-shrink: 0;
+        }
+
+        .hero-img {
+            width: 280px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 20px 20px 0 var(--light-gray);
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: white;
+        }
+
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        .bio-text {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.4;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .skills-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .skills-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .skills-list i {
+            color: var(--secondary);
+            font-size: 0.8rem;
+        }
+
+        .project-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            align-items: flex-start;
+        }
+
+        .project-img {
+            width: 120px;
+            flex-shrink: 0;
+            border: 1px solid var(--border);
+        }
+
+        .project-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-section {
+            background: var(--primary);
+            color: white;
+        }
+
+        .book-section h2 {
+            color: white;
+        }
+
+        .book-grid {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .book-cover {
+            width: 200px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .chinese-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #fff5f5;
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .chinese-img {
+            width: 80px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 2px;
+            transition: opacity 0.3s;
+        }
+
+        .gallery img:hover {
+            opacity: 0.9;
+        }
+
+        .photo-large {
+            grid-column: span 2;
+            grid-row: span 2;
+            height: 416px !important;
+        }
+
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            background: var(--light-gray);
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .header-content { flex-direction: column-reverse; }
+            .hero-img { width: 100%; box-shadow: 10px 10px 0 var(--light-gray); }
+            .project-item { flex-direction: column; }
+            .project-img { width: 100px; }
+            .photo-large { grid-column: auto; grid-row: auto; height: 200px !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="hero-text">
+                    <h1>Ryan Vinson</h1>
+                    <p class="tagline">Los Angeles based Fractional CTO & Founder</p>
+                    <p class="bio-text">Internet consultant with 25 years of experience across every wave of startup mania. Helping companies optimize infrastructure and lead innovative product launches.</p>
+                    <div class="social-links">
+                        <a href="mailto:info@ryanvinson.com" class="btn">Get in Touch</a>
+                        <a href="https://www.linkedin.com/in/ryanvinson" target="_new" style="display: flex; align-items: center; gap: 5px;">
+                            <i class="fa fa-linkedin-square fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img-container">
+                    <img src="assets/img/ryan-vinson.jpg" alt="Ryan Vinson" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="expertise">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>The Fractional CTO</h3>
+                    <p>Often called a "Technical Swiss Army Knife," I consult executives, hire and mentor staff, and lead engineering teams for both rapid turnarounds and long-term strategic projects.</p>
+                    <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem;">
+                        <a href="/5-types-of-cto/">Learn about the 5 Types of CTO and how I fit in &rarr;</a>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Modern Tech Stack</h3>
+                    <ul class="skills-list">
+                        <li><i class="fa fa-code"></i> Python (Django, FastAPI)</li>
+                        <li><i class="fa fa-code"></i> Node.js & React</li>
+                        <li><i class="fa fa-code"></i> PHP & Laravel</li>
+                        <li><i class="fa fa-database"></i> PostgreSQL & MySQL</li>
+                        <li><i class="fa fa-cloud"></i> AWS & Google Cloud</li>
+                        <li><i class="fa fa-robot"></i> AI & Langchain</li>
+                        <li><i class="fa fa-tv"></i> Roku (Brightscript)</li>
+                        <li><i class="fa fa-linux"></i> Linux (Ubuntu, Debian)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Creations & Projects</h2>
+            
+            <div class="project-item">
+                <img src="assets/img/logo.png" alt="VersusMedia" class="project-img">
+                <div class="project-content">
+                    <h4>VersusMedia</h4>
+                    <p>Founded in 2001, helping indie filmmakers and musicians collaborate. Broadcasts content on Roku, Android, and Apple Fast TV devices.</p>
+                    <p><a href="https://www.versusmedia.com" target="_new">Visit VersusMedia &rarr;</a></p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="assets/img/cyf.png" alt="Choose Your Fate AI" class="project-img">
+                <div class="project-content">
+                    <h4>Choose Your Fate AI</h4>
+                    <p>100+ AI-powered text-based RPGs inspired by "Choose Your Own Adventure" books. Dynamic storytelling driven by user choice and AI generation.</p>
+                    <p><a href="https://chooseyourfate.ai/" target="_new">Play the Games &rarr;</a></p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="assets/img/filmpilot_ai_logo.png" alt="FilmPilot.ai" class="project-img">
+                <div class="project-content">
+                    <h4>FilmPilot.ai</h4>
+                    <p>Transforming screenplays into vision with AI storyboards, character design, and audience simulations. Bridging the gap from script to screen.</p>
+                    <p><a href="https://filmpilot.ai/" target="_new">Explore FilmPilot &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="author" class="book-section">
+        <div class="container">
+            <h2>Published Works</h2>
+            <div class="book-grid">
+                <img src="assets/img/disregarded-entity-book-cover.png" alt="Disregarded Entity" class="book-cover">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3>Disregarded Entity</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Lessons learned by a 15-year freelancer. A collection of stories, methods, and insights from over a decade of self-employment.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="http://amzn.to/2nbFfC5" target="_new" class="btn" style="background: #fff; color: #1a1a1a;">Amazon</a>
+                        <a href="https://itunes.apple.com/us/book/id1229794936" target="_new" class="btn" style="background: #fff; color: #1a1a1a;">Apple Books</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="culture">
+        <div class="container">
+            <h2>Proficiency & Hobbies</h2>
+            
+            <div class="chinese-section">
+                <img src="assets/img/zhongwen.gif" alt="Chinese Proficiency" class="chinese-img">
+                <div>
+                    <h4>Mandarin Chinese Proficiency (中文普通话)</h4>
+                    <p>6+ years of training with multiple immersion trips to Beijing, Shanghai, Chengdu, Guangzhou, and more. Ongoing proficiency advancement.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h3>Winemaking & Photography</h3>
+                <p>Amateur winemaker exploring the process from crushing to bottling. Hobbyist photographer capturing the energy of Los Angeles and beyond.</p>
+                
+                <div class="gallery">
+                    <img src="assets/img/photography/downtown-los-angeles-griffith-observatory-2020.jpg" alt="LA Photography" class="photo-large">
+                    <img src="assets/img/fermenting.jpg" alt="Winemaking">
+                    <img src="assets/img/photography/neowise-comet-2020-malibu-canyon.jpg" alt="Neowise Comet">
+                    <img src="assets/img/photography/hollywood-sign-at-sunset.jpg" alt="Hollywood Sign">
+                    <img src="assets/img/winemaking.jpg" alt="Winemaking Process">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="mailto:info@ryanvinson.com">Email</a>
+                <a href="https://www.linkedin.com/in/ryanvinson" target="_new">LinkedIn</a>
+                <a href="https://www.imdb.com/name/nm13722030" target="_new">IMDB</a>
+                <a href="https://ctoforhire.xyz" target="_new">CTO for Hire</a>
+            </div>
+            <p>&copy; 2026 Ryan Vinson. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
